@@ -1,38 +1,106 @@
-.App {
-  text-align: center;
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+    background: linear-gradient(90deg, #aea4e3, #d3ffe8);
+    text-align: center;
+    color:cadetblue;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+header{
+    font-size: 1.5rem;
+}
+
+header, form{
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form input{
+   width: 17rem;
+}
+
+form input, form button{
+    padding: 0.5rem;
+    font-size: 2rem;
+    border: none;
+    background: #d3ffe8;
+}
+ form button{
+   color:rgb(23, 213, 213);
+   background: #d3ffe8;
+   cursor: pointer;
+   transition: all 0.3s ease;
+}
+
+form button:hover{
+    background: rgb(23, 213, 213);
+    color:#d3ffe8;
+}
+  .complete-btn,.delete-btn{
+    color:#3b0979;
+    background: #d3ffe8;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    border: none;
+    padding-top: 3px;
+    padding-left: 3px;
+    margin-right: 3px;
   }
+
+.todo{
+    margin: 0.5em;
+    background: #d3ffe8;
+    color:black;
+    font-size: 1rem;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    line-height: 3rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.filter-todo{
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: none;
+    background: #d3ffe8;
+    margin-left: 3rem;
+    color:#3b0979; 
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.todo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-  to {
-    transform: rotate(360deg);
-  }
+  
+  .todo-list {
+    
+    min-width: 35%;
+   }
+
+
+  .todo-item{
+    list-style: none;
 }
+
+ 
+  .todo li{
+    flex:1;
+   }
+
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
